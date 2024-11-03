@@ -1,50 +1,145 @@
-# React + TypeScript + Vite
+# Ignite Feed 📱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Descrição
+O Ignite Feed é uma aplicação que simula uma rede social, desenvolvida durante o programa Ignite da Rocketseat. O projeto implementa funcionalidades comuns de redes sociais como posts, comentários e interações entre usuários.
 
-Currently, two official plugins are available:
+## ✨ Preview da Aplicação
+![Ignite Feed Preview]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
+- Criação de posts
+- Sistema de comentários
+- Likes em comentários
+- Remoção de comentários
+- Formatação de data relativa (há X tempo)
+- Interface responsiva
+- Validação de comentários vazios
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
+- React.js
+- TypeScript
+- CSS Modules
+- Date-fns para formatação de datas
+- Phosphor Icons para ícones
+- Vite como bundler
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 💻 Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+- Git
 
-- Configure the top-level `parserOptions` property like this:
+## 🔧 Instalação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone o repositório
+```bash
+git clone https://github.com/LLucas-Melo/igniteFeed.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Acesse a pasta do projeto
+```bash
+cd igniteFeed
 ```
+
+3. Instale as dependências
+```bash
+npm install
+# ou
+yarn install
+```
+
+4. Inicie o servidor de desenvolvimento
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+## 📁 Estrutura do Projeto
+```
+igniteFeed/
+├── src/
+│   ├── components/
+│   │   ├── Avatar/
+│   │   ├── Comment/
+│   │   ├── Header/
+│   │   ├── Post/
+│   │   └── Sidebar/
+│   ├── assets/
+│   ├── styles/
+│   └── App.tsx
+├── public/
+└── package.json
+```
+
+## 🎯 Principais Componentes
+
+### Header
+- Componente de cabeçalho da aplicação
+- Exibe o logo e navegação
+
+### Post
+- Componente principal para exibição de posts
+- Gerencia estados de comentários
+- Implementa interações de usuário
+
+### Comment
+- Componente para exibição e gerenciamento de comentários
+- Sistema de likes
+- Funcionalidade de deletar comentário
+
+### Sidebar
+- Exibe informações do perfil do usuário
+- Permite edição de perfil
+
+### Avatar
+- Componente reutilizável para exibição de avatares
+- Suporta diferentes tamanhos e estilos
+
+## 🔄 Fluxo da Aplicação
+1. Usuário visualiza feed de posts
+2. Pode adicionar comentários em posts
+3. Interagir com comentários (like/delete)
+4. Visualizar informações de perfil na sidebar
+
+## 📝 Características do Código
+- Componentização eficiente
+- Uso de TypeScript para type safety
+- CSS Modules para estilização isolada
+- Hooks do React para gerenciamento de estado
+- Formatação de datas com date-fns
+- Princípios de Clean Code
+
+## 🚀 Funcionalidades Futuras Sugeridas
+- [ ] Implementar sistema de autenticação
+- [ ] Adicionar funcionalidade de compartilhamento
+- [ ] Implementar sistema de seguir usuários
+- [ ] Adicionar notificações em tempo real
+- [ ] Implementar sistema de hashtags
+- [ ] Adicionar suporte a imagens nos comentários
+
+## 🤝 Como Contribuir
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 🐛 Encontrou um bug?
+Caso encontre algum problema, por favor abra uma issue no GitHub com:
+- Descrição clara do problema
+- Passos para reproduzir
+- Comportamento esperado
+- Screenshots (se aplicável)
+
+## 📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👤 Autor
+Lucas Melo
+- GitHub: [@LLucas-Melo](https://github.com/LLucas-Melo)
+
+## 🙏 Agradecimentos
+- Rocketseat pelo programa Ignite
+- Comunidade do React
+- Contribuidores do projeto
+****
